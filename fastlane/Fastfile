@@ -1,0 +1,31 @@
+default_platform(:flutter)
+
+platform :android do
+  desc "Deploy a new version to the Google Play Store"
+  lane :deploy do
+    flutter_build(task: "appbundle", build_args: "-t lib/main_prod.dart --dart-define-from-file=.env.prod")
+    upload_to_play_store(track: 'production')
+  end
+
+  desc "Deploy a beta version"
+  lane :beta do
+    flutter_build(task: "apk", build_args: "-t lib/main_dev.dart --dart-define-from-file=.env.dev")
+    upload_to_play_store(track: 'internal')
+  end
+end
+
+platform :ios do
+  desc "Push a new release build to the App Store"
+  lane :deploy do
+    match(type: "appstore")
+    flutter_build(task: "ipa", build_args: "-t lib/main_prod.dart --dart-define-from-file=.env.prod")
+    upload_to_app_store(force: true)
+  end
+
+  desc "Push a new beta build to TestFlight"
+  lane :beta do
+    match(type: "appstore")
+    flutter_build(task: "ipa", build_args: "-t lib/main_dev.dart --dart-define-from-file=.env.dev")
+    upload_to_testflight
+  end
+end

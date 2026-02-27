@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Politique de confidentialité de l'application ProII Fantasy League.">
+    <title>Politique de Confidentialité — ProII Fantasy League</title>
+    <style>
+        /* ── Reset & Base ─────────────────────────────────── */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7;
+            color: #1d1d1f;
+            background: linear-gradient(160deg, #f0f2f5 0%, #e8ecf1 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        /* ── Card Container ───────────────────────────────── */
+        .policy-card {
+            width: 100%;
+            max-width: 720px;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .04), 0 12px 40px rgba(0, 0, 0, .06);
+            padding: 48px 40px 56px;
+        }
+
+        /* ── Header ───────────────────────────────────────── */
+        .policy-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .app-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.75rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            border-radius: 24px;
+            margin-bottom: 20px;
+        }
+
+        .policy-header h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 8px;
+        }
+
+        .last-updated {
+            font-size: 0.85rem;
+            color: #6b7280;
+        }
+
+        /* ── Sections ─────────────────────────────────────── */
+        .policy-section {
+            margin-bottom: 32px;
+        }
+
+        .policy-section:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .policy-section h2 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 12px;
+            padding-left: 14px;
+            border-left: 3px solid #6366f1;
+        }
+
+        .policy-section p {
+            color: #374151;
+            margin-bottom: 12px;
+        }
+
+        .policy-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .policy-section li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+            color: #374151;
+        }
+
+        .policy-section li::before {
+            content: "";
+            position: absolute;
+            left: 4px;
+            top: 10px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #c7d2fe;
+        }
+
+        .policy-section strong {
+            color: #1f2937;
+        }
+
+        .policy-section a {
+            color: #6366f1;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color .2s;
+        }
+
+        .policy-section a:hover {
+            border-bottom-color: #6366f1;
+        }
+
+        /* ── Footer ───────────────────────────────────────── */
+        .policy-footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid #e5e7eb;
+            font-size: 0.8rem;
+            color: #9ca3af;
+        }
+
+        /* ── Responsive ───────────────────────────────────── */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px 8px;
+            }
+
+            .policy-card {
+                padding: 28px 20px 36px;
+                border-radius: 12px;
+            }
+
+            .policy-header h1 {
+                font-size: 1.35rem;
+            }
+
+            .policy-section h2 {
+                font-size: 1.05rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <article class="policy-card">
+
+        <!-- Header -->
+        <header class="policy-header">
+            <div class="app-badge">⚽ ProII Fantasy League</div>
+            <h1>Politique de Confidentialité</h1>
+            <p class="last-updated">Dernière mise à jour : 19 février 2026</p>
+        </header>
+
+        <!-- 1. Informations collectées -->
+        <section class="policy-section">
+            <h2>1. Informations collectées</h2>
+            <ul>
+                <li><strong>Informations de compte :</strong> nom d'utilisateur et adresse e-mail (via Supabase Auth).
+                </li>
+                <li><strong>Données de jeu :</strong> équipes, ligues, choix de draft et scores.</li>
+                <li><strong>Analytique :</strong> données d'utilisation, informations sur l'appareil et rapports de
+                    plantage (via Sentry).</li>
+            </ul>
+        </section>
+
+        <!-- 2. Utilisation -->
+        <section class="policy-section">
+            <h2>2. Utilisation de vos informations</h2>
+            <ul>
+                <li>Fournir, maintenir et améliorer l'application.</li>
+                <li>Gérer votre compte et votre connexion.</li>
+                <li>Améliorer l'équilibre du jeu et corriger les bugs.</li>
+                <li>Communiquer avec vous concernant les mises à jour ou le support technique.</li>
+            </ul>
+        </section>
+
+        <!-- 3. Partage -->
+        <section class="policy-section">
+            <h2>3. Partage des données</h2>
+            <ul>
+                <li>Nous <strong>ne vendons pas</strong> vos données personnelles.</li>
+                <li>Nous pouvons partager des données avec des prestataires tiers (Supabase pour l'hébergement, Sentry
+                    pour le suivi d'erreurs) uniquement pour le fonctionnement de l'application.</li>
+            </ul>
+        </section>
+
+        <!-- 4. Sécurité -->
+        <section class="policy-section">
+            <h2>4. Sécurité des données</h2>
+            <p>
+                Nous utilisons des mesures conformes aux standards de l'industrie pour protéger vos
+                données, incluant le chiffrement en transit (TLS) et au repos. Aucune méthode de
+                transmission sur Internet ne peut cependant garantir une sécurité absolue.
+            </p>
+        </section>
+
+        <!-- 5. Droits -->
+        <section class="policy-section">
+            <h2>5. Vos droits</h2>
+            <ul>
+                <li>Demander la <strong>suppression de votre compte</strong> directement depuis les paramètres de
+                    l'application.</li>
+                <li>Demander une <strong>copie de vos données</strong> en contactant le support.</li>
+                <li>Retirer votre consentement à tout moment en cessant d'utiliser l'application.</li>
+            </ul>
+        </section>
+
+        <!-- 6. Enfants -->
+        <section class="policy-section">
+            <h2>6. Confidentialité des enfants</h2>
+            <p>
+                Nous ne collectons pas sciemment d'informations personnelles auprès d'enfants
+                de moins de 13&nbsp;ans. Si nous découvrons avoir collecté de telles informations,
+                elles seront immédiatement supprimées.
+            </p>
+        </section>
+
+        <!-- 7. Modifications -->
+        <section class="policy-section">
+            <h2>7. Modifications de cette politique</h2>
+            <p>
+                Nous pouvons mettre à jour cette politique de confidentialité de temps à autre.
+                Toute modification sera publiée sur cette page avec une date de mise à jour révisée.
+                Nous vous encourageons à consulter régulièrement cette page.
+            </p>
+        </section>
+
+        <!-- 8. Contact -->
+        <section class="policy-section">
+            <h2>8. Contact</h2>
+            <p>
+                Pour toute question concernant cette politique de confidentialité, contactez-nous à
+                <a href="mailto:privacy@proii.app">privacy@proii.app</a>.
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer class="policy-footer">
+            &copy; 2026 ProII Fantasy League. Tous droits réservés.
+        </footer>
+
+    </article>
+
+</body>
+
+</html>
